@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:travel/colors.dart';
+import 'package:travel/screens/gift_screen.dart';
 
 class BirthdayScreen extends StatelessWidget {
   const BirthdayScreen({super.key});
@@ -6,7 +9,7 @@ class BirthdayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink,
+      backgroundColor: AppColors.violet,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -15,10 +18,11 @@ class BirthdayScreen extends StatelessWidget {
             children: [
               Text(
                 'HAPPY BIRTHDAY ALICE!',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                style: GoogleFonts.chewy(
+                  textStyle: const TextStyle(
+                      fontSize: 60,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.eggplant),
                 ),
                 textAlign: TextAlign.center,
                 softWrap: true,
@@ -34,12 +38,27 @@ class BirthdayScreen extends StatelessWidget {
         ),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(20),
-            backgroundColor: Colors.deepOrange,
-            foregroundColor: Colors.black,
+            elevation: 4,
+            side: BorderSide(
+              color: AppColors.violet,
+              width: 2.0,
+              style: BorderStyle.solid,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+            backgroundColor: AppColors.eggplant,
+            foregroundColor: AppColors.lavender,
           ),
           onPressed: () {},
-          child: const Text('CLICK ME!'),
+          child: const Text(
+            'CLICK ME!',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );
