@@ -48,6 +48,7 @@ class _OpenedGiftScreenState extends State<OpenedGiftScreen> {
     setState(() => _pressed = false);
   }
 
+// commento di prova
   @override
   Widget build(BuildContext context) {
     return Scaffold(
