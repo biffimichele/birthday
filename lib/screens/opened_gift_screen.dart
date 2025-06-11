@@ -110,7 +110,7 @@ class _OpenedGiftScreenState extends State<OpenedGiftScreen> {
                               ),
                               const SizedBox(height: 40),
                               Text(
-                                "Seleziona la data che vuoi partire:",
+                                "Seleziona la data della partenza:",
                                 style: const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold,
