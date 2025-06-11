@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel/screens/birthday_screen.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:travel/components/animated_start_button.dart';
+import 'package:travel/widgets/gradient_background.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,43 +8,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                elevation: 4,
-                side: BorderSide(
-                  color: Colors.pink.shade900,
-                  width: 2.0,
-                  style: BorderStyle.solid,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
-                backgroundColor: Colors.pink.shade600,
-                foregroundColor: Colors.white,
+      body: GradientBackground(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // hearts image
+              Image.asset(
+                'assets/hearts.png',
+                filterQuality: FilterQuality.none,
+                isAntiAlias: false,
+                scale: 1,
+                fit: BoxFit.fill,
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const BirthdayScreen(),
-                  ),
-                );
-              },
-              child: const Text(
-                'CLICK ME!',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
+              // Spacing
+              SizedBox(height: 30),
+              // Button + AnimationOnPress + Text
+              AnimatedStartButton(),
+            ],
+          ),
         ),
       ),
     );
