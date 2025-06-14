@@ -57,7 +57,7 @@ class _OpenedGiftScreenState extends State<OpenedGiftScreen> {
           child: Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 25,
-              vertical: 100,
+              vertical: 70,
             ),
             child: Column(
               children: [
@@ -177,7 +177,7 @@ class _OpenedGiftScreenState extends State<OpenedGiftScreen> {
                         selectedDate != null
                             ? Padding(
                                 padding: const EdgeInsets.only(
-                                  bottom: 30,
+                                  bottom: 40,
                                 ),
                                 child: GestureDetector(
                                   onTap: _handleTap,
